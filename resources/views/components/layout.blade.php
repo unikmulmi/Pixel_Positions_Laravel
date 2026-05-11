@@ -27,20 +27,20 @@
         </div>
 
 
-        {{-- <div class="flex space-x-6 font-bold">
+        <div class="flex space-x-6 font-bold">
             <a href="/jobs/create">Post a Job</a>
             
-            <form method="POST" action="/logout">
+            {{-- <form method="POST" action="/logout">
 
                 <button type="submit" class="cursor-pointer">Log Out</button>
-            </form>
-        </div> --}}
+            </form> --}}
+        </div>
 
 
-        <div class="flex space-x-4 font-bold">
+        {{-- <div class="flex space-x-4 font-bold">
             <a href="/register">Sign Up</a>
             <a href="/login">Login</a>
-        </div>
+        </div> --}}
 
     </nav>
 

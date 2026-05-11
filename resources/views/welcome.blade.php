@@ -1,8 +1,44 @@
 <x-layout>
+<div class="space-y-10">
+    <section class="pt-10">
+        <x-section-heading>Featured Jobs</x-section-heading>
 
-<div class="text-center">
-    <h1 class="text-4xl font-bold mb-4">Welcome to Pixel Positions</h1>
-    <p class="text-lg text-gray-300">Find your next career opportunity with us.</p>
+        <div class="grid lg:grid-cols-3 gap-8 mt-6">
+
+            <x-job-card  />
+            <x-job-card  />
+            <x-job-card  />
+            
+        </div>
+    </section>
+
+
+    <section>
+        <x-section-heading>Tags</x-section-heading>
+        
+        <div class="mt-6 space-x-1">
+
+
+        </div>
+        
+    </section>
+
+
+
+    <section>
+        <x-section-heading>Recent Jobs</x-section-heading>
+        <div class="mt-6 space-y-6">
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+                <x-tag>  Tag </x-tag>
+
+        </div>
+    </section>
 </div>
-
 </x-layout>
