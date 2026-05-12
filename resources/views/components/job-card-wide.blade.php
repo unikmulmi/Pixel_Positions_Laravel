@@ -1,10 +1,10 @@
-<div class="flex gap-x-6 p-4 bg-white/5 rounded-xl border border-transparent hover:border-blue-600 group transition-colors duration-300">
+<x-panel class="flex gap-x-6">
     {{-- <x-employer-logo /> --}}
     <div>
         <x-employer-logo />
     </div>
-    
-    
+
+
 
     <div class=" flex-1 flex flex-col">
         <a href="#" class="self-start text-sm text-gray-400">Employer Name</a>
@@ -19,13 +19,12 @@
     <div class="flex justify-between items-center mt-auto">
         <div>
 
-                <x-tag>  Frontend </x-tag> 
-                <x-tag>  Backend </x-tag> 
-                <x-tag>  Api </x-tag> 
+            <x-tag> Frontend </x-tag>
+            <x-tag> Backend </x-tag>
+            <x-tag> Api </x-tag>
 
         </div>
 
-
-
     </div>
-</div>
+
+</x-panel>
