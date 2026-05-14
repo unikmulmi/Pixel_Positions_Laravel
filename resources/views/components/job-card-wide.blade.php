@@ -9,24 +9,21 @@
 
 
     <div class=" flex-1 flex flex-col">
-        <a href="#" class="self-start text-sm text-gray-400">Employer Name</a>
-        <h3 class="group-hover:text-blue-600 text-xl font-bold transition-colors duration-300">
+        <a href="#" class="self-start text-sm text-gray-400">{{ $job->employer->name }}</a>
+        <h3 class="font-bold text-xl mt-3 group-hover:text-blue-600 transition-colors duration-300">
             <a href="#" target="_blank">
-                Laravel Developer
+                {{ $job->title }}
             </a>
         </h3>
-        <p class="text-sm mt-auto text-gray-400">Full-Time From $60,000</p>
+        <p class="text-sm mt-auto text-gray-400">{{ $job->schedule }} From {{ $job->salary }}</p>
     </div>
 
-    <div class="flex justify-between items-center mt-auto">
         <div>
 
-            @foreach ($jobs->tags as $tag)
+            @foreach ($job->tags as $tag)
                 <x-tag :$tag />
             @endforeach
 
         </div>
-
-    </div>
 
 </x-panel>

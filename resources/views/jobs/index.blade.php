@@ -18,8 +18,8 @@
 
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
 
-                @foreach ($jobs as $job)
-                    <x-job-card :$job />
+                @foreach ($featuredJobs as $job)
+                    <x-job-card :$job />  {{--  same as <x-job-card :job="$job" passing job props to job-card. /> --}}
                 @endforeach
 
             </div>
@@ -33,7 +33,6 @@
                 @foreach ($tags as $tag)
                     <x-tag :tag="$tag" />
                 @endforeach
-                <x-tag />
 
             </div>
 
@@ -46,7 +45,7 @@
             <div class="mt-6 space-y-6">
 
             @foreach ($jobs as $job)
-                <x-job-card-wide :$job />
+                <x-job-card-wide :$job /> {{--  same as <x-job-card-wide :job="$job" passing job props to job-card-wide. /> --}}
             @endforeach
 
             </div>
