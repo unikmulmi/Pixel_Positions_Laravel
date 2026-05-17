@@ -10,6 +10,6 @@ Route::get('/', [JobController::class , 'index']);
 Route::get('/register' , [RegisterUserController::class , 'create']);
 Route::post('/register' , [RegisterUserController::class , 'store']);
 
-Route::get('login' , [SessionController::class , 'create']);
-Route::post('login' , [SessionController::class , 'store']);
-Route::delete('logout' , [SessionController::class , 'destroy']); // For logout @method('DELETE') on nav form.
+Route::get('/login' , [SessionController::class , 'create']);
+Route::post('/login' , [SessionController::class , 'store']);
+Route::delete('/logout' , [SessionController::class , 'destroy']); // For logout @method('DELETE') on nav form.
