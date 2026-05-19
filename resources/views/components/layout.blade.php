@@ -27,20 +27,26 @@
         </div>
 
 
+        @auth
         <div class="flex space-x-6 font-bold">
             <a href="/jobs/create">Post a Job</a>
             
-            {{-- <form method="POST" action="/logout">
+            <form method="POST" action="/logout">
+                @csrf
+                @method('DELETE')
+
 
                 <button type="submit" class="cursor-pointer">Log Out</button>
-            </form> --}}
+            </form>
         </div>
+        @endauth
 
-
-        {{-- <div class="flex space-x-4 font-bold">
+        @guest
+        <div class="flex space-x-4 font-bold">
             <a href="/register">Sign Up</a>
             <a href="/login">Login</a>
-        </div> --}}
+
+        @endguest
 
     </nav>
 
