@@ -1,59 +1,234 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Pixel Positions
+
+A modern job listing platform built with Laravel that connects employers with job seekers. Employers can create accounts and publish job opportunities, while users can browse featured and recent jobs through a clean and responsive interface.
+
+## 📖 Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [How It Works](#how-it-works)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Screenshots](#screenshots)
+- [Future Improvements](#future-improvements)
+- [What I Learned](#what-i-learned)
+- [License](#license)
+
+##  About
+
+Pixel Positions is a Laravel-based job listing platform designed to simplify the job search process. Employers can register, manage their company profile, and publish job listings, while visitors can search and browse available positions through an intuitive interface.
+
+The project demonstrates Laravel fundamentals including MVC architecture, authentication, Eloquent ORM, file uploads, database relationships, and responsive UI development with Tailwind CSS.
+
+
+##  Features
+
+- User Authentication
+- Employer Registration
+- Company Logo Upload
+- Job Listings
+- Featured Jobs
+- Recent Jobs
+- Search Jobs
+- Job Tags
+- Responsive Design
+- Dark Theme UI
+
+  
+## Tech Stack
+
+
+| Technology | Purpose |
+|------------|---------|
+| Laravel | Backend Framework |
+| PHP | Server-side Language |
+| Blade | Templating Engine |
+| Tailwind CSS | Styling |
+| MySQL | Database |
+| Eloquent ORM | Database Management |
+| Vite | Asset Bundling |
+
+##  How It Works
+
+1. Employers register for an account.
+2. Company information and logo are provided during registration.
+3. Employers log in to access the platform.
+4. Job listings are created and published.
+5. Visitors can browse featured jobs, recent jobs, and search for opportunities.
+
+##  Project Structure
+
+```text
+pixel_positions/
+│
+├── app/
+│   ├── Http/
+│   ├── Models/
+│   ├── Providers/
+│   └── View/
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+│
+├── public/
+│
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│
+├── routes/
+│
+├── storage/
+│
+├── screenshots/
+│
+└── README.md
+```
+
+##  Installation
+
+Clone the repository.
+
+```bash
+git clone https://github.com/yourusername/pixel_positions.git
+```
+
+Navigate into the project.
+
+```bash
+cd pixel_positions
+```
+
+Install PHP dependencies.
+
+```bash
+composer install
+```
+
+Install JavaScript dependencies.
+
+```bash
+npm install
+```
+
+Copy the environment file.
+
+```bash
+cp .env.example .env
+```
+
+Generate the application key.
+
+```bash
+php artisan key:generate
+```
+
+Configure your database inside the `.env` file.
+
+Run migrations and seeders.
+
+```bash
+php artisan migrate --seed
+```
+
+Start the Vite development server.
+
+```bash
+npm run dev
+```
+
+Run the Laravel development server.
+
+```bash
+php artisan serve
+```
+
+---
+
+##  Environment Variables
+
+Create a `.env` file and configure the following values.
+
+```env
+APP_NAME=PixelPositions
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=pixel_positions
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+#  Screenshots
+
+##  Home Page
+
+The Home page provides a clean and modern interface where users can search for jobs, browse featured opportunities, explore popular technologies, and view the latest job postings.
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <img src="screenshots/featured.png" alt="Home Page">
 </p>
 
-## About Laravel
+##  Recent Jobs
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The recent jobs section displays the latest job postings added to the platform. Each listing includes company information, job title, salary, and relevant technologies.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+    <img src="screenshots/recent.png" alt="Recent Jobs">
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##  Login
 
-## Learning Laravel
+Registered users and employers can securely log in using their email address and password to access the platform.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+<p align="center">
+    <img src="screenshots/LOGIN.png" alt="Login">
+</p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##  Register
 
-## Laravel Sponsors
+Employers can create an account by providing their personal details, company name, and company logo before posting job opportunities.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<p align="center">
+    <img src="screenshots/register.png" alt="Register">
+</p>
 
-### Premium Partners
+##  Future Improvements
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Employer Dashboard
+- Applicant Tracking
+- Advanced Search Filters
+- Pagination
+- Company Profiles
+- Bookmark Jobs
+- REST API
 
-## Contributing
+##  What I Learned
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Building Pixel Positions helped me strengthen my understanding of:
 
-## Code of Conduct
+- Laravel MVC Architecture
+- Eloquent Relationships
+- Database Migrations and Seeders
+- CRUD Operations
+- Form Validation
+- File Upload Handling
+- Blade Templating
+- Tailwind CSS
+- Route Protection using Middleware
+- Responsive Web Design
+- Git and GitHub Workflow
+- Implemented secure login and registration using sessions, CSRF protection, and password hashing
+- Building a complete full-stack Laravel application
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
